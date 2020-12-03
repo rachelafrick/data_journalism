@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+
+
+
+<body>
+
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a><img class="logo" src="images/alien.png"> </a>
+	     </div>
+	    <ul class="nav navbar-nav">
+	    	<li> <a href="#" style="color: #2e2a65; font-family: 'Ubuntu', sans-serif; font-size:20px"> Signs of Life Outside of Earth</a> </li>
+	      <li><a href ="index.html"> Home </a></li>
+	      <li> <a href ="about.html"> About </a></li>
+	      <li class="dropdown">
+	        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Blog Posts
+	        <span class="caret"></span></a>
+	        <ul class="dropdown-menu">
+
+			<% for(var i=0; i<blog_array.length; i++) {%>
+	          <li><a href=<%= blog_array[i].title.trim().replace(/ /g, "_") + ".html" %>><%= blog_array[i].title %></a></li>
+	        <% } %>
+
+	        </ul>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+
+
+		
+</body>
+</html>

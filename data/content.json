@@ -1,0 +1,39 @@
+[
+
+{
+	"author": "Sanya Arora",
+	"date": "November 6, 2020",
+	"time": "6:30pm",
+	"title": "Possible life on Jupiter's Moon",
+	"content": ["There could be possible life on one of Jupiter's moons, Europa. This moon is covered with gas and ice. Possible high temperatures on the moon coul melt the ice into oceans, making it habitable for life.", "However, due to Europa's far distance from Earth, it will likely be years before we can investigate this theory. In the meantime, we can look for possible electronic or environmental signatures that aliens could output."],
+	"subject": [
+		"Jupiter",
+		"Possible Life"
+	]
+},
+
+{
+	"author": "Sanya Arora",
+	"date": "November 6, 2020",
+	"time": "7:00pm",
+	"title": "NASA's exoplanet program",
+	"content": ["NASA's exoplanet program is aimed at finding life on other planets. Early projects include NASA’s Kepler and K2, or the James Webb Space Telescope In recent news, scientists at the NASA Exoplanet Science Institute are debating whether or not to expand their classification of a habitable planet. Some scientists argue that our current model is too limiting, as it defines a habitable planet based on what is habitable for life on Earth.", " NASA reports that the search for extraterrestrial life will be a slow one, possible taking decades to complete. As a result, we will have to wait a while before finding any alien life."],
+	"subject": [
+		"NASA",
+		"Research"
+	]
+},
+{
+	"author": "Sanya Arora",
+	"date": "November 8, 2020",
+	"time": "9:00pm",
+	"title": "Technosignatures and Geosignatures",
+	"content": ["The search for extraterrestrial life has often involved searching for geosignatures, or geographic signatures left by some life form on a planet. This search is quite difficult due the fact that it's hard to see geosygnatures.", "However, Adam Frank, a professor of physics and astronomy at the University of Rochester, recently recieved a grant from NASA to search for technosignatures. Technosignatures are techonological signatures left by life forms, such as pollutants or certain types of energy. This could revolutionize the search for alien life by allowing scientists to search much farther than the previously could."],
+	"subject": [
+		"Searsh for Life",
+		"Signatures"
+	]
+
+}
+
+]

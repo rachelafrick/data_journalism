@@ -1,0 +1,45 @@
+body {
+  background-color: #F1DAC4;
+}
+.text {
+  color: #2e2a65;
+  font-family: 'Roboto', sans-serif;
+}
+h1 {
+  margin-top: 5px;
+  color: #2e2a65;
+  font-family: 'Ubuntu', sans-serif;
+  margin-left: 25px;
+}
+h2 {
+  color: #4C397F;
+  font-family: 'Ubuntu', sans-serif;
+  margin-left: 25px;
+}
+h3 {
+  color: #994e4f;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 25px;
+}
+.logo {
+  height: 48px;
+  padding: 2px 10px;
+}
+.footer {
+  background-color: #f8ede2;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #2e2a65;
+  font-family: 'Roboto', sans-serif;
+}
+.navbar {
+  background-color: #F7EADE;
+  color: #2e2a65;
+}
+.figcaption {
+  color: #2e2a65;
+  font-family: 'Roboto', sans-serif;
+}
