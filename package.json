@@ -1,0 +1,26 @@
+{
+  "name": "rachelafrick.github.io",
+  "version": "1.0.0",
+  "description": "Interest Site",
+  "main": "blog_generator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rachelafrick/rachelafrick.github.io.git"
+  },
+  "author": "Rachel Africk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rachelafrick/rachelafrick.github.io/issues"
+  },
+  "homepage": "https://github.com/rachelafrick/rachelafrick.github.io#readme",
+  "dependencies": {
+    "bootstrap": "^3.4.1",
+    "ejs": "^3.1.5",
+    "fs": "0.0.1-security",
+    "less": "^3.12.2"
+  },
+  "devDependencies": {}
+}

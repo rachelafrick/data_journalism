@@ -2,45 +2,46 @@
 
 <html lang="en">
 
-  <%- include ('global/header', {title:"about"}) %>
-  <%- include ('global/navbar', {blog_array: blog_array}) %>
-
+<head>
+  <meta charset="utf-8">
+  <meta content="text/html" http-equiv="Content-type">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>About</title>
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+  <meta name="description" content="Hello World">
+  <meta name="author" content="Rachel Africk">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap" rel="stylesheet">
+</head>
 
 <body>
-
-<h2> About </h2>
-
-<div class = "container-fluid">
-  <div class ="col-lg-12">
-          <div class="jumbotron vertical-center" style="background-color: #f2e6dc; padding:5px">
-  <h3> Why this topic? </h3>
-  <p class="text"> The search for extraterrestrial life is an interesting topic because it's really a search to answer the question, "are we<br> alone in the universe?" The universe is so incredibly vast and we've explored so much of it, and yet we haven't found any <br>
-   other life. How is it that the Earth is so teeming with life, and no other planet we've explored is? </p>
-</div>
-</div>
-</div>
-
-<div class = "container-fluid">
-        <div class ="col-lg-12">
-          <div class="jumbotron vertical-center" style="background-color: #f2e6dc; padding:5px">
-
-  <h3> Online Resources: </h3>
-  <ol> 
-  <li> <a href="https://exoplanets.nasa.gov/faq/5/is-there-life-on-other-planets/"> A brief description of NASA's past explorations to find extraterrestrial life </a>  </li>
-
-  <li>  <a href="https://www.businessinsider.com/nasa-plans-to-find-alien-life-next-decade-2019-11"> An article by Business Insider describing the future of NASA's missions to explore alien life </a>  </li>
-
-  <li> <a href ="https://www.forbes.com/sites/startswithabang/2019/06/14/is-alien-life-hiding-beyond-earth-2-0/#2a699f1c2966"> A Forbes article that gives a simple overview of the science behind the search for other forms of life </a> </li>
-
-  </ol>
-</div>
-</div>
-</div>
-
-
-<%- include ('global/footer') %>
-
-
+  <%- include('global/navbar'); %>
+  <%- include('global/header'); %>
+  <script src="js/scripts.js"></script>
+  <div class="row">
+    <div class="col-sm-6">
+      <section>Doing crossword puzzles involves solving clues for the correct word or phrase. Solving crossword puzzles is a fun way to pass time while engaging your mind. I love solving them because I enjoy watching my times improve over time, as
+        well as making more progress on puzzles later in the week which are usually more difficult. I usually do the New York Times puzzles, either in the newspaper physically or on their crossword app. </section>
+    </div>
+    <div class="col-sm-6">
+      <div class="links">
+        <div class="row">
+          <a href=https://www.nytimes.com/guides/crosswords/how-to-solve-a-crossword-puzzle class="btn btn-link" role="button">How to Solve the New York Times Crossword</a>
+        </div>
+        <div class="row">
+          <a href=https://www.theatlantic.com/newsletters/archive/2020/05/crossword-tips-for-solving/611086 class="btn btn-link" role="button">Tips from a Crossword Pro</a>
+        </div>
+        <div class="row">
+          <a href=https://www.wealthwords.com/blog/crossword-puzzle-tips-and-tricks-swear-by-crossword-experts class="btn btn-link" role="button">More Tips from Crossword Experts</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%- include('global/footer'); %>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 </body>
 
 </html>
