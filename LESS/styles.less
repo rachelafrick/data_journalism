@@ -1,67 +1,65 @@
+/* colors
+lavender blush : F7EBEC
+thistle: DDBDD5
+glossy grape: AC9FBB
+bdazzled blue: 235789
+raisin black: 1D1E2C
+*/
 
-
-@lightpurple:  #4C397F;
-@darkpurple: #2e2a65;
-@reddish: #994e4f;
-@background: #F1DAC4;
-@footer: #F7EADE;
-
-
-
+@blush : #F7EBEC;
+@thistle : #DDBDD5;
+@grape : #AC9FBB;
+@navy : #235789;
+@black :  #1D1E2C;
 
 body {
-  background-color: @background;
+  font-family: 'Baloo Tammudu 2', sans-serif;
+  margin: 25px;
+  background-color: @blush;
+  font-size: 14px;
 }
 
-.text{
-  color: @darkpurple;
-  font-family: 'Roboto', sans-serif;
+header{
+  background-color: @navy;
+  color: @thistle;
+  font-size: 32px;
 }
 
+.subtitle {
+  margin: 0;
+  text-indent: 50px;
+  color: @grape;
+  font-size: 20px;
 
-h1{
-  margin-top: 5px;
-  color: @darkpurple;
-  font-family: 'Ubuntu', sans-serif;
-  margin-left: 25px;
 }
+
+.links{
+  border-style: ridge;
+  border-color: @navy;
+  border-width: 6px;
+  padding: 25px;
+  margin: 20px;
+}
+
+a:visited {
+  color: darken(@navy, 50%);
+}
+
+footer{
+  background-color: @navy;
+  color: @thistle;
+  font-size: 18px;
+}
+
+table, td {
+  border: 1px solid black;
+  border-collapse: collapse;}
 
 h2{
-  color: @lightpurple;
-  font-family: 'Ubuntu', sans-serif;
-  margin-left: 25px;
+   .links();
 }
 
-h3{
-  color: @reddish;
-  font-family: 'Roboto', sans-serif;
-  margin-left: 25px;
+section{
+   padding: 25px;
+
 }
-
-
-.logo{
-  height: 48px;
-  padding: 2px 10px;
-}
-
-.footer {
-  background-color: lighten(@footer, 1%);
-  text-align: center;
-  position: fixed;
-  left: 0;
-  right:0;
-  bottom: 0;
-  color: @darkpurple;
-  font-family: 'Roboto', sans-serif;
-}
-
-.navbar{
-  background-color: @footer;
-  color: @darkpurple;
-}
-
-.figcaption{
-	.text();
-}
-
-

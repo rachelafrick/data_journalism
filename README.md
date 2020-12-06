@@ -1,7 +1,3 @@
-
-# How to build the site:
-
-'cd Node_basics'
-'node blog_generator.js'
-
-This will generate all necessaary html files. Index.html is the home page.
+# rachelafrick.github.io
+## Interest Site
+### In order to build the site, run "lessc LESS/styles.less build/css/style.css" and then "node blog_generator.js" in terminal. 
