@@ -18,8 +18,7 @@ coverage.forEach(function(coverage) {
   character['military'] = character_info[5];
   character['uninsured'] = character_info[6];
   characters.push(character);
-  cleandata.push(characters);
 
 });
 
-  fs.writeFileSync('data/coverage.json', JSON.stringify(cleandata), 'utf8');
+  fs.writeFileSync('data/coverage.json', JSON.stringify(characters), 'utf8');
