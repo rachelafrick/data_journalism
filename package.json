@@ -9,7 +9,7 @@
     "compile": "npm run compile:css && npm run compile:html",
     "lint": "jshint ./build/js/*.js",
     "build": "npm run compile && npm run lint",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,12 @@
     "jshint": "^2.12.0",
     "less": "^3.12.2",
     "rimraf": "^3.0.2"
+  },
+  "jest": {
+    "verbose": true,
+    "testMatch": [
+      "**/test/**/*.test.js"
+    ]
   },
   "devDependencies": {}
 }
