@@ -139,10 +139,7 @@ test('average is first and labeled United States', () => {
 
 
 /*
-3. check for 51 (states + national average)
-4. check that each has seven labels (medicate, medicaid, etc)
-5. check that no one category is larger than 1 for a single state
-6. check that each states totals for the types add up to 1
+
 
 7. check that there are no duplicate states
 8. check that the national average is the average of the data from the 50 states
