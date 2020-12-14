@@ -38,9 +38,9 @@ test('check for 51 (states + national average)', () => {
   let fifty = false;
   if(data.length==51){
     fifty=true;
-  }   
+  }
   expect(fifty).toBe(true);
-  
+
 });
 
 //4. check that each has seven labels (medicade, medicaid, etc)
@@ -61,7 +61,7 @@ test('check that each has seven labels (medicade, medicaid, etc)', () => {
 });
 
 //5. check that no one category is larger than 1 for a single state
-test('check that each has seven labels (medicade, medicaid, etc)', () => {
+test('no category greater than 1', () => {
   let one = false;
   for (let i = 0; i< data.length; i++){
 
@@ -78,11 +78,11 @@ test('check that each has seven labels (medicade, medicaid, etc)', () => {
 });
 
 //6. check that each states totals for the types add up to 1
-test('check that each has seven labels (medicade, medicaid, etc)', () => {
+test('each state totals 1', () => {
   let one = false;
   for (let i = 0; i< data.length; i++){
 
-  if (data[i].medicaid + data[i].medicare + data[i].employer + data[i].uninsured  + data[i].military + data[i].nongroup == 1){
+  if (data[i].medicaid + data[i].medicare + data[i].employer + data[i].uninsured  + data[i].military + data[i].nongroup >.9 && data[i].medicaid + data[i].medicare + data[i].employer + data[i].uninsured  + data[i].military + data[i].nongroup <1.1){
      one = true;
    }
    else {
@@ -94,16 +94,31 @@ test('check that each has seven labels (medicade, medicaid, etc)', () => {
    expect(one).toBe(true);
 });
 
+//7. check that there are no duplicate states
+
+test('no duplicate states', () => {
+let unique = []
+  for (let i = 1; i< data.length; i++){
+  if(!unique.includes(data[i].location)) unique.push (data[i].location);
+
+ }
+
+   expect(unique.length).toBe(data.length-1);
+});
+
 //8. check that the national average is the average of the data from the 50 states
 
 test('average is true average', () => {
   let average = 0;
   for (let i = 1; i< data.length; i++){
- average+=data[i].unisured;
+    let uninsured = "";
+    uninsured = data[i].uninsured.replace(".", "");
+    let check = parseInt(uninsured);
+ average+=check;
 
  }
  average = (average/50)
-   expect(average).toBe(data[0].unisured);
+   expect(average).toBe(data[0].uninsured);
 });
 
 //9. US Average should be labeled United States
@@ -114,35 +129,20 @@ test('average is first and labeled United States', () => {
      avgLabel = true;
    }
    else {
-     avgLabel = false
-     break;
+     avgLabel = false;
    }
 
    expect(avgLabel).toBe(true);
 });
 
 //10. check that the data is in alphabetical order by state
-test('average is first and labeled United States', () => {
-  let avgLabel = false;
+test('alphabetical order', () => {
+  let locations = [];
+  for (let i = 0; i< data.length; i++){
+locations.push (data[i].location );
+}
+let sortedLocs = []
+sortedLocs = locations.sort();
 
-  if (data[0].location == "United States"){
-     avgLabel = true;
-   }
-   else {
-     avgLabel = false
-     break;
-   }
-
-   expect(avgLabel).toBe(true);
+   expect(sortedLocs).toBe(locations);
 });
-
-
-
-/*
-
-
-7. check that there are no duplicate states
-8. check that the national average is the average of the data from the 50 states
-9. US Average should be labeled United States
-10. check that data is in alphabetical order by state
-*/
