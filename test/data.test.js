@@ -32,6 +32,68 @@ test('no empty data points', () => {
    expect(empty).toBe(true);
 });
 
+//3. check for 51 (states + national average)
+
+test('check for 51 (states + national average)', () => {
+  let fifty = false;
+  if(data.length==51){
+    fifty=true;
+  }   
+  expect(fifty).toBe(true);
+  
+});
+
+//4. check that each has seven labels (medicade, medicaid, etc)
+test('check that each has seven labels (medicade, medicaid, etc)', () => {
+  let seven = false;
+  for (let i = 0; i< data.length; i++){
+
+  if (data[i].medicaid != "" && data[i].medicare !="" &&data[i].employer !="" &&data[i].uninsured  !="" &&data[i].military !="" &&data[i].nongroup !=""){
+     seven = true;
+   }
+   else {
+     seven = false
+     break;
+   }
+
+ }
+   expect(seven).toBe(true);
+});
+
+//5. check that no one category is larger than 1 for a single state
+test('check that each has seven labels (medicade, medicaid, etc)', () => {
+  let one = false;
+  for (let i = 0; i< data.length; i++){
+
+  if (data[i].medicaid <= 1 && data[i].medicare <= 1 &&data[i].employer <= 1 &&data[i].uninsured  <= 1 &&data[i].military <= 1 &&data[i].nongroup <= 1){
+     one = true;
+   }
+   else {
+     one = false
+     break;
+   }
+
+ }
+   expect(one).toBe(true);
+});
+
+//6. check that each states totals for the types add up to 1
+test('check that each has seven labels (medicade, medicaid, etc)', () => {
+  let one = false;
+  for (let i = 0; i< data.length; i++){
+
+  if (data[i].medicaid + data[i].medicare + data[i].employer + data[i].uninsured  + data[i].military + data[i].nongroup == 1){
+     one = true;
+   }
+   else {
+     one = false
+     break;
+   }
+
+ }
+   expect(one).toBe(true);
+});
+
 //8. check that the national average is the average of the data from the 50 states
 
 test('average is true average', () => {
@@ -56,7 +118,6 @@ test('average is first and labeled United States', () => {
      break;
    }
 
- }
    expect(avgLabel).toBe(true);
 });
 
@@ -72,7 +133,6 @@ test('average is first and labeled United States', () => {
      break;
    }
 
- }
    expect(avgLabel).toBe(true);
 });
 
