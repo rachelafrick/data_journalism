@@ -114,7 +114,7 @@ test('average is true average', () => {
     let uninsured = "";
     uninsured = data[i].uninsured.replace(".", "");
     let check = parseInt(uninsured);
- average+=check;
+    average+=check;
 
  }
  average = (average/50)
