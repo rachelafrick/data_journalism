@@ -81,8 +81,8 @@ test('no category greater than 1', () => {
 test('each state totals 1', () => {
   let one = false;
   for (let i = 0; i< data.length; i++){
-
-  if (data[i].medicaid + data[i].medicare + data[i].employer + data[i].uninsured  + data[i].military + data[i].nongroup >.9 && data[i].medicaid + data[i].medicare + data[i].employer + data[i].uninsured  + data[i].military + data[i].nongroup <1.1){
+  if (parseFloat(data[i].medicaid) + parseFloat(data[i].medicare) + parseFloat(data[i].employer) + parseFloat(data[i].uninsured)  + parseFloat(data[i].military) + parseFloat(data[i].nongroup) > .9 &&
+parseFloat(data[i].medicaid) + parseFloat(data[i].medicare) + parseFloat(data[i].employer) + parseFloat(data[i].uninsured)  + parseFloat(data[i].military) + parseFloat(data[i].nongroup) <1.1){
      one = true;
    }
    else {
@@ -109,16 +109,19 @@ let unique = []
 //8. check that the national average is the average of the data from the 50 states
 
 test('average is true average', () => {
+  let check = false;
   let average = 0;
   for (let i = 1; i< data.length; i++){
-    let uninsured = "";
-    uninsured = data[i].uninsured.replace(".", "");
-    let check = parseInt(uninsured);
-    average+=check;
+    uninsured = data[i].uninsured
+    let check = parseFloat(uninsured);
+ average+=check;
 
  }
- average = (average/50)
-   expect(average).toBe(data[0].uninsured);
+if((average/50).toFixed(3)== parseFloat(data[0].uninsured)){
+  check = true
+
+}
+   expect(check).toBe(true);
 });
 
 //9. US Average should be labeled United States
