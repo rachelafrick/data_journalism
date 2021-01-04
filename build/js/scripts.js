@@ -6,12 +6,22 @@ Plotly.d3.csv('./data/coveragedata.csv', function(err, rows){
           return rows.map(function(row) { return row[key]; });
       }
 
+      var amtuninsured =[];
+      var locs=[];
+      const data= require("./data/coverage.json")
+
+      for(var i =1; i<51;i++){
+      	amtuninsured.append(data[i].uninsured)
+      	locs.append(data[i].location)
+      }
+
+
       var data = [{
           type: 'choropleth',
           locationmode: 'USA-states',
-          locations: unpack(rows, 'Location'),
-          z: unpack(rows, 'uninsured'),
-          text: unpack(rows, 'Location'),
+          locations: locs,
+          z: amtuninsured,
+          text: locs,
           zmin: 0,
           zmax: 1,
           colorscale: [
