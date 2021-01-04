@@ -522,6 +522,9 @@ let data1= [
           return rows.map(function(row) { return row[key]; });
       }
 
+      console.log("z: " + unpack(rows, 'total exports'))
+      console.log("locations: " + unpack(rows, 'code'))
+
       var data = [{
           type: 'choropleth',
           locationmode: 'USA-states',
