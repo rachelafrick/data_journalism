@@ -20,7 +20,7 @@ Plotly.d3.csv('./data/coveragedata.csv', function(err, rows){
       console.log("locs "+ locs)
 
 
-      var data = [{
+      var data2 = [{
           type: 'choropleth',
           locationmode: 'USA-states',
           locations: locs,
@@ -55,6 +55,6 @@ Plotly.d3.csv('./data/coveragedata.csv', function(err, rows){
           }
       };
 
-      Plotly.newPlot("myDiv", data, layout, {showLink: false});
+      Plotly.newPlot("myDiv", data2, layout, {showLink: false});
 });
 
