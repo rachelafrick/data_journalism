@@ -478,6 +478,11 @@ let data1= [
       console.log("unin "+ amtuninsured)
       console.log("locs "+ locs)
 
+      Plotly.d3.csv('./data/coveragedata.csv', function(err, rows){
+      function unpack(rows, key) {
+          return rows.map(function(row) { return row[key]; });
+      }
+
 
       var data2 = [{
           type: 'choropleth',
@@ -515,6 +520,8 @@ let data1= [
       };
 
       Plotly.newPlot("myDiv", data2, layout, {showLink: false}); 
+
+  });
 
 
     /*  Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2011_us_ag_exports.csv', function(err, rows){
