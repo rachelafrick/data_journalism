@@ -474,8 +474,8 @@ Plotly.d3.csv('./data/coveragedata.csv', function(err, rows){
 
 
       for(var i =1; i<51;i++){
-      	amtuninsured.append(data1[i].uninsured)
-      	locs.append(data1[i].location)
+      	amtuninsured.push(data1[i].uninsured)
+      	locs.push(data1[i].location)
       }
 
       console.log("unin "+ amtuninsured)
