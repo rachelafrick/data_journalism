@@ -1,5 +1,6 @@
 /*console.log("js/scripts.js connected to index.html");
 localStorage.setItem("top-secret-information", "you would never guess what kind of data is stored here."); */
+const data1= require("./data/coverage.json")
 
 Plotly.d3.csv('./data/coveragedata.csv', function(err, rows){
       function unpack(rows, key) {
@@ -8,7 +9,7 @@ Plotly.d3.csv('./data/coveragedata.csv', function(err, rows){
 
       var amtuninsured =[];
       var locs=[];
-      const data1= require("./data/coverage.json")
+ 
 
 
       for(var i =1; i<51;i++){
