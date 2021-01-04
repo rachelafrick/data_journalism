@@ -1,6 +1,6 @@
 /*console.log("js/scripts.js connected to index.html");
 localStorage.setItem("top-secret-information", "you would never guess what kind of data is stored here."); */
-/*
+
 let data1= [
   {
     "location": "United States",
@@ -482,7 +482,7 @@ let data1= [
       var data2 = [{
           type: 'choropleth',
           locationmode: 'USA-states',
-          locations: locs,
+          locations: [ 'AL', 'AK', 'AS', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'DC', 'FM', 'FL', 'GA', 'GU', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MH', 'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'MP', 'OH', 'OK', 'OR', 'PW', 'PA', 'PR', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VI', 'VA', 'WA', 'WV', 'WI', 'WY' ],
           z: amtuninsured,
           text: locs,
           zmin: 0,
@@ -514,10 +514,10 @@ let data1= [
           }
       };
 
-      Plotly.newPlot("myDiv", data2, layout, {showLink: false}); */
+      Plotly.newPlot("myDiv", data2, layout, {showLink: false}); 
 
 
-      Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2011_us_ag_exports.csv', function(err, rows){
+    /*  Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2011_us_ag_exports.csv', function(err, rows){
       function unpack(rows, key) {
           return rows.map(function(row) { return row[key]; });
       }
@@ -561,7 +561,7 @@ let data1= [
       };
 
       Plotly.newPlot("myDiv", data, layout, {showLink: false});
-});
+}); */
 
 
 
