@@ -2,7 +2,7 @@ const fs = require('fs');
 
 let characters = [];
 
-let data_csv = fs.readFileSync('data/coveragedata.csv', 'utf8');
+let data_csv = fs.readFileSync('build/data/coveragedata.csv', 'utf8');
 
 let coverage = data_csv.split("\n");
 let cleandata = [];

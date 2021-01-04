@@ -1,7 +1,7 @@
 /*console.log("js/scripts.js connected to index.html");
 localStorage.setItem("top-secret-information", "you would never guess what kind of data is stored here."); */
 
-Plotly.d3.csv('../data/coveragedata.csv', function(err, rows){
+Plotly.d3.csv('./data/coveragedata.csv', function(err, rows){
       function unpack(rows, key) {
           return rows.map(function(row) { return row[key]; });
       }
