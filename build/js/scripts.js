@@ -20,7 +20,7 @@ Plotly.d3.csv('./data/coveragedata.csv', function(err, rows){
               [0.8, 'rgb(117,107,177)'], [1, 'rgb(84,39,143)']
           ],
           colorbar: {
-              title: 'Millions USD',
+              title: 'Percent Uninsured',
               thickness: 0.2
           },
           marker: {
@@ -33,7 +33,7 @@ Plotly.d3.csv('./data/coveragedata.csv', function(err, rows){
 
 
       var layout = {
-          title: '2011 US Agriculture Exports by State',
+          title: 'Percent of uninsured citizens by State',
           geo:{
               scope: 'usa',
               showlakes: true,
