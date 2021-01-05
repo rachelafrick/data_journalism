@@ -464,15 +464,14 @@ let mdata =
 
 
 
-for(i=1;i<mdata.length;i++){
 var bars = [
     {
         x: ['employer', 'nongroup','medicaid','medicare','military','uninsured'],
-        y: [mdata[i].employer, mdata[i].nongroup, mdata[i].medicaid, mdata[i].medicare, mdata[i].military, mdata[i].uninsured],
+        y: [data.employer, data.nongroup, data.medicaid, data.medicare, data.military, data.uninsured],
         type: 'bar'
     }
  ];
 
- Plotly.newPlot(mdata[i].location, bars);
-}
+ Plotly.newPlot(data.location, bars);
+
 
