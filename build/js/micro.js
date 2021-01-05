@@ -462,7 +462,7 @@ let mdata =
   }
 ]
 
-var names= document.getElementById("name").textContent;
+var names= document.getElementById("namee").textContent;
 var indexx=0;
 console.log(names);
 for(let i=1; i<mdata.length;i++){

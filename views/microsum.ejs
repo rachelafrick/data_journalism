@@ -16,9 +16,11 @@
 </head>
 
 <body>
+  <p id="namee"> <%=data.location%> </p> 
+  
   <%- include('global/navbar'); %>
   <%- include('global/header'); %>
-  <p id="name"> <%=data.location%> </p> 
+
 
   
   <div id= <%= data.location %> ><!-- Plotly chart will be drawn inside this DIV --></div>
