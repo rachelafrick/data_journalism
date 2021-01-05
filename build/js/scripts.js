@@ -521,6 +521,23 @@ let data1= [
 
       Plotly.newPlot("myDiv", data2, layout, {showLink: false}); 
 
+      .then(gd => {
+		  gd.on('plotly_click', d => {
+		    var pt = (d.points || [])[0]
+		    
+		    /*switch(pt.location) {
+		      case 'CAN':
+		        console.log('you clicked on CAN')
+		        break
+		      case 'USA':
+		        console.log('you clicked on USA')
+		        break
+		    }*/
+		    console.log(pt.location);
+		    
+		  })
+		})
+
   }); 
 
 /*
