@@ -540,7 +540,7 @@ let data1= [
 		    	}
 		    }
 
-		    window.location.assign("microsums/"+ data1[index+1].location.trim().replace(/ /g, "_")+".html")
+		    window.location.assign( data1[index+1].location.trim().replace(/ /g, "_")+".html")
 		    
 		  })
 		}) 

@@ -35,7 +35,7 @@ blog_html = ejs.render(blog_template, {
 });
 
 
-fs.writeFileSync(`build/microsums/${title}`, blog_html, 'utf8');
+fs.writeFileSync(`build/${title}`, blog_html, 'utf8');
 
 
 }
