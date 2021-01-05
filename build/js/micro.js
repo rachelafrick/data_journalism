@@ -464,7 +464,7 @@ let mdata =
 
 
 
-for(i=0;i<mdata.length;i++){
+for(i=1;i<mdata.length;i++){
 var bars = [
     {
         x: ['employer', 'nongroup','medicaid','medicare','military','uninsured'],
