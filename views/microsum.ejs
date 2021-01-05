@@ -12,18 +12,20 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
     <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
-  <script src="js/micro.js"> </script>
+
 </head>
 
 <body>
   <p id="namee"> <%=data.location%> </p> 
-  
+
   <%- include('global/navbar'); %>
   <%- include('global/header'); %>
 
 
   
   <div id= <%= data.location %> ><!-- Plotly chart will be drawn inside this DIV --></div>
+
+    <script src="js/micro.js"> </script>
 
   <%- include('global/footer'); %>
             <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
