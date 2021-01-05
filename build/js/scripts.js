@@ -530,7 +530,7 @@ let data1= [
 		        break
 		    }*/
 		    console.log(pt.location);
-		    window.location.assign("rachelafrick.github.io/build/about.html")
+		    window.location.assign("https://rachelafrick.github.io/data_journalism/build/about.html")
 		    
 		  })
 		}) 
