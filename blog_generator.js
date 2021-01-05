@@ -27,10 +27,15 @@ let blog_template = fs.readFileSync('views/microsum.ejs', 'utf8');
 
 for (let i=1; i<coverage.length; i++ ){
 let title = coverage[i]["location"].trim().replace(/ /g, "_")+".html";
+
 blog_html = ejs.render(blog_template, {
   filename: __dirname + '/views/microsum.ejs',
   data: coverage[i]
 
 });
+
+
 fs.writeFileSync(`build/microsums/${title}`, blog_html, 'utf8');
+
+
 }
