@@ -1,6 +1,6 @@
 /*console.log("js/scripts.js connected to index.html");
 localStorage.setItem("top-secret-information", "you would never guess what kind of data is stored here."); */
-
+/*
 let data1= [
   {
     "location": "United States",
@@ -521,10 +521,10 @@ let data1= [
 
       Plotly.newPlot("myDiv", data2, layout, {showLink: false}); 
 
-  });
+  }); */
 
 
-    /*  Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2011_us_ag_exports.csv', function(err, rows){
+     Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2011_us_ag_exports.csv', function(err, rows){
       function unpack(rows, key) {
           return rows.map(function(row) { return row[key]; });
       }
@@ -568,7 +568,7 @@ let data1= [
       };
 
       Plotly.newPlot("myDiv", data, layout, {showLink: false});
-}); */
+}); 
 
 
 
