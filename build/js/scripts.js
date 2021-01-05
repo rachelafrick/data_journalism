@@ -475,8 +475,6 @@ let data1= [
       	locs.push(data1[i].location)
       }
 
-      console.log("unin "+ amtuninsured)
-      console.log("locs "+ locs)
 
       Plotly.d3.csv('./data/coveragedata.csv', function(err, rows){
       function unpack(rows, key) {
@@ -532,6 +530,7 @@ let data1= [
 		        break
 		    }*/
 		    console.log(pt.location);
+		    window.location.assign("rachelafrick.github.io/build/about.html")
 		    
 		  })
 		}) 
