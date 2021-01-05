@@ -466,7 +466,9 @@ var names= document.getElementById("namee").textContent;
 var indexx=0;
 console.log(names);
 for(let i=1; i<mdata.length;i++){
-	if(names==mdata[i].location){
+	names=names.replace(" ","")
+	let string = mdata[i].location.replace(" ", "")
+	if(names==string){
 		indexx=i;
 	}
 }
