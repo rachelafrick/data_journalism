@@ -521,6 +521,9 @@ let data1= [
 
       Plotly.newPlot("myDiv", data2, layout, {showLink: false}); 
 
+  }); 
+
+      
       .then(gd => {
 		  gd.on('plotly_click', d => {
 		    var pt = (d.points || [])[0]
@@ -538,7 +541,6 @@ let data1= [
 		  })
 		})
 
-  }); 
 
 /*
      Plotly.d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2011_us_ag_exports.csv', function(err, rows){
