@@ -1,7 +1,7 @@
 const fs = require('fs');
 const ejs = require('ejs');
 
-let blogposts= fs.readFileSync('data/content.json', 'utf8');
+let blogposts= fs.readFileSync('build/data/content.json', 'utf8');
 blogposts = JSON.parse(blogposts)
 
 //generate index

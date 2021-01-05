@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap" rel="stylesheet">
+   <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+  <script src="js/scripts.js"></script>
 </head>
 
 <body>
@@ -22,21 +24,14 @@
 
   <div class="row">
     <div class="col-sm-4">
-      <h2>Quick Tips</h2>
-      <p>Watch this quick video for some beginner tips on puzzle solving. </p>
-      <iframe width="400" height="315" src="https://www.youtube.com/embed/edgpOYJKxfw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <h2> Map Description:  </h2>
+      <p> Include a descriptive summary of your project </p>
+
     </div>
     <div class="col-sm-4">
-      <h2>Try it yourself!</h2>
+      <h2> Our Map: </h2>
       <p>Try this Tuesday puzzle to test your skills!</p>
-      <img src="images/crossword.jpeg" width="400" height="315">
-
-
-    </div>
-    <div class="col-sm-4">
-      <h2>Review in Depth</h2>
-      <p>Listen as this podcast walks you through the steps to solving a week of recent puzzles.</p>
-      <iframe src="https://fireside.fm/player/v2/v5CJgS1_+ojUL3p4g?theme=dark" width="400" height="100" frameborder="0" scrolling="no"></iframe>
+       <div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
     </div>
   </div>
 
