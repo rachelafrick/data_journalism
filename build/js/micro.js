@@ -462,16 +462,23 @@ let mdata =
   }
 ]
 
-
+var names= document.getElementById("name").textContent;
+var indexx=0;
+console.log(names);
+for(let i=1; i<mdata.length;i++){
+	if(names==mdata[i].location){
+		indexx=i;
+	}
+}
 
 var bars = [
     {
         x: ['employer', 'nongroup','medicaid','medicare','military','uninsured'],
-        y: [data.employer, data.nongroup, data.medicaid, data.medicare, data.military, data.uninsured],
+        y: [mdata[indexx].employer, mdata[indexx].nongroup, mdata[indexx].medicaid, mdata[indexx].medicare, mdata[indexx].military, mdata[indexx].uninsured],
         type: 'bar'
     }
  ];
 
- Plotly.newPlot(data.location, bars);
+ Plotly.newPlot(mdata[indexx].location, bars);
 
 
