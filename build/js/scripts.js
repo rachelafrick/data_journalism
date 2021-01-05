@@ -540,7 +540,7 @@ let data1= [
 		    	}
 		    }
 
-		    window.location.assign( data1[index+1].location.trim().replace(/ /g, "_")+".html")
+		    window.location.assign("https://rachelafrick.github.io/data_journalism/build/" + data1[index+1].location.trim().replace(/ /g, "_")+".html")
 		    
 		  })
 		}) 
