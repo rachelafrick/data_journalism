@@ -491,7 +491,7 @@ let data1= [
           z: amtuninsured,
           text: locs,
           zmin: 0,
-          zmax: 1,
+          zmax: .2,
           colorscale: [
               [0, 'rgb(242,240,247)'], [0.2, 'rgb(218,218,235)'],
               [0.4, 'rgb(188,189,220)'], [0.6, 'rgb(158,154,200)'],
