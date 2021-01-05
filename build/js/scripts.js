@@ -519,12 +519,7 @@ let data1= [
           }
       };
 
-      Plotly.newPlot("myDiv", data2, layout, {showLink: false}); 
-
-  }); 
-
-      
-      .then(gd => {
+      Plotly.newPlot("myDiv", data2, layout).then(gd => {
 		  gd.on('plotly_click', d => {
 		    var pt = (d.points || [])[0]
 		    
@@ -539,7 +534,12 @@ let data1= [
 		    console.log(pt.location);
 		    
 		  })
-		})
+		}) 
+
+  }); 
+
+
+      
 
 
 /*
