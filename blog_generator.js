@@ -1,7 +1,7 @@
 const fs = require('fs');
 const ejs = require('ejs');
 
-let coverage= fs.readFileSync('build/data/content.json', 'utf8');
+let coverage= fs.readFileSync('build/data/coverage.json', 'utf8');
 coverage = JSON.parse(coverage)
 
 //generate index
@@ -26,11 +26,11 @@ fs.writeFileSync("build/about.html", about_html, 'utf8');
 let blog_template = fs.readFileSync('views/microsum.ejs', 'utf8');
 
 for (let i=1; i<coverage.length; i++ ){
-let title = coverage[i]["title"].trim().replace(/ /g, "_")+".html";
+let title = coverage[i]["location"].trim().replace(/ /g, "_")+".html";
 blog_html = ejs.render(blog_template, {
   filename: __dirname + '/views/microsum.ejs',
   data: coverage[i]
 
 });
-fs.writeFileSync(`build/${title}`, blog_html, 'utf8');
+fs.writeFileSync(`build/microsums/${title}`, blog_html, 'utf8');
 }

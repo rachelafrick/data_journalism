@@ -467,6 +467,7 @@ let data1= [
 
       var amtuninsured =[];
       var locs=[];
+      var index=0;
  
 
 
@@ -474,6 +475,8 @@ let data1= [
       	amtuninsured.push(data1[i].uninsured*100)
       	locs.push(data1[i].location)
       }
+
+      let locas= [ 'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME',  'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY' ];
 
 
       Plotly.d3.csv('./data/coveragedata.csv', function(err, rows){
@@ -485,7 +488,7 @@ let data1= [
       var data2 = [{
           type: 'choropleth',
           locationmode: 'USA-states',
-          locations: [ 'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME',  'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY' ],
+          locations: locas,
           z: amtuninsured,
           //text: locs,
           zmin: 0,
@@ -530,7 +533,14 @@ let data1= [
 		        break
 		    }*/
 		    console.log(pt.location);
-		    window.location.assign("https://rachelafrick.github.io/data_journalism/build/about.html")
+
+		    for(let i=0;i<locas.length;i++){
+		    	if(pt.location==locas[i]){
+		    		index=i;
+		    	}
+		    }
+
+		    window.location.assign( data1[index+1].location.trim().replace(/ /g, "_")+".html")
 		    
 		  })
 		}) 
