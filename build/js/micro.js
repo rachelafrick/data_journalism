@@ -8,7 +8,6 @@ let mdata=[];
 Plotly.d3.json('./data/coverage.json', function(err, fig) {
 	mdata=fig;
 	console.log(mdata);
-	analysis();
 	for(let i=1; i<fig.length;i++){
 		names=names.replace(" ","")
 		let string = fig[i].location.replace(" ", "")
@@ -46,7 +45,8 @@ Plotly.d3.json('./data/coverage.json', function(err, fig) {
 
 });
 
-function analysis(){
+document.getElementById(fig[indexx].location.replace(" ", "")).onload = function() {
+	console.log(mdata);
 	if(mdata[indexx].uninsured<mdata[0].uninsured){
 		document.getElementbyId("analysis").innerText="The data for " + mdata[indexx].location + " shows that the majority of people in " + mdata[indexx].location + " recieve insurance through their employer. " + mdata[indexx].uninsured + " percent of the population of " + mdata[indexx].location + " is uninsured. This number is less then the national average, meaning " + mdata[indexx].location + " has a higher health care coverage rate than the U.S. as a whole." ;
 	}
