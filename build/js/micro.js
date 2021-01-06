@@ -3,7 +3,7 @@
 
 var names= document.getElementById("namee").textContent;
 var indexx=0;
-var mdata;
+var mdata=[];
 console.log(names);
 
 Plotly.d3.json('./data/coverage.json', function(err, fig) {
