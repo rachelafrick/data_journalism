@@ -16,14 +16,22 @@ Plotly.d3.json('./data/coverage.json', function(err, fig) {
 	}
 	var bars = [
 	    {
-	        x: ['Employer', 'Nongroup','Medicaid','Medicare','Military', fig[indexx].location + 'uninsured', 'National Average Uninsured' ],
-	        y: [fig[indexx].employer, fig[indexx].nongroup, fig[indexx].medicaid, fig[indexx].medicare, fig[indexx].military, fig[indexx].uninsured, fig[0].uninsured],
+	        x: ['Employer', 'Nongroup','Medicaid','Medicare','Military', fig[indexx].location + ' Uninsured', 'National Average Uninsured' ],
+	        y: [fig[indexx].employer*100, fig[indexx].nongroup*100, fig[indexx].medicaid*100, fig[indexx].medicare*100, fig[indexx].military*100, fig[indexx].uninsured*100, fig[0].uninsured*100],
+	        marker:{
+	        	color: ['rgb(114, 0, 214)', 'rgb(114, 0, 214)', 'rgb(114, 0, 214)', 'rgb(114, 0, 214)', 'rgb(114, 0, 214)', 'rgb(114, 0, 214)', 'rgb(0, 47, 255)']
+	        }
 	        type: 'bar'
 	    }
 	 ];
 
+	var layout = {
+	  xaxis: {title: 'Type of Health Care'},
+	  yaxis: {title: 'Percent of Population'},
+	};
 
-	 Plotly.newPlot(fig[indexx].location.replace(" ", ""), bars);
+
+	 Plotly.newPlot(fig[indexx].location.replace(" ", ""), bars, layout);
 
 });
 

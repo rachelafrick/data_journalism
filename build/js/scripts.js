@@ -25,7 +25,7 @@
           locationmode: 'USA-states',
           locations: locas,
           z: amtuninsured,
-          //text: locs,
+          text: locs,
           zmin: 0,
           zmax: 20,
           colorscale: [
