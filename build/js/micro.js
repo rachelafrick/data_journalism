@@ -3,10 +3,12 @@
 
 var names= document.getElementById("namee").textContent;
 var indexx=0;
+var mdata;
 console.log(names);
 
 Plotly.d3.json('./data/coverage.json', function(err, fig) {
-	console.log(fig);
+	mdata=fig;
+	console.log(mdata);
 	for(let i=1; i<fig.length;i++){
 		names=names.replace(" ","")
 		let string = fig[i].location.replace(" ", "")
@@ -35,16 +37,16 @@ Plotly.d3.json('./data/coverage.json', function(err, fig) {
 	  yaxis: {title: 'Percent of Population'},
 	};
 
-	if(fig[indexx].uninsured<fig[0].uninsured){
-		document.getElementbyId("analysis").innerText="The data for " + fig[indexx].location + " shows that the majority of people in " + fig[indexx].location + " recieve insurance through their employer. " + fig[indexx].uninsured + " percent of the population of " + fig[indexx].location + " is uninsured. This number is less then the national average, meaning " + fig[indexx].location + " has a higher health care coverage rate than the U.S. as a whole." ;
-	}
 
-	else{
-		document.getElementbyId("analysis").innerText="The data for " + fig[indexx].location + " shows that the majority of people in " + fig[indexx].location + " recieve insurance through their employer. " + fig[indexx].uninsured + " percent of the population of " + fig[indexx].location + " is uninsured. This number is greater then the national average, meaning " + fig[indexx].location + " has a lower health care coverage rate than the U.S. as a whole." ;
-	}
 
 	 Plotly.newPlot(fig[indexx].location.replace(" ", ""), bars, layout);
 
 });
 
+	if(mdata[indexx].uninsured<mdata[0].uninsured){
+		document.getElementbyId("analysis").innerText="The data for " + mdata[indexx].location + " shows that the majority of people in " + mdata[indexx].location + " recieve insurance through their employer. " + mdata[indexx].uninsured + " percent of the population of " + mdata[indexx].location + " is uninsured. This number is less then the national average, meaning " + mdata[indexx].location + " has a higher health care coverage rate than the U.S. as a whole." ;
+	}
 
+	else{
+		document.getElementbyId("analysis").innerText="The data for " + mdata[indexx].location + " shows that the majority of people in " + mdata[indexx].location + " recieve insurance through their employer. " + mdata[indexx].uninsured + " percent of the population of " + mdata[indexx].location + " is uninsured. This number is greater then the national average, meaning " + mdata[indexx].location + " has a lower health care coverage rate than the U.S. as a whole." ;
+	}
