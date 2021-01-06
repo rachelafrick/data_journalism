@@ -29,7 +29,9 @@ Plotly.d3.json('./data/coverage.json', function(err, fig) {
 	var layout = {
 	  xaxis: {
 	  	title: 'Type of Health Care',
-	  	tickangle:-45
+	  	tickangle:-45,
+	  	layout.automargin: true,
+	  	layout.xaxis.automargin: true
 	  },
 	  yaxis: {title: 'Percent of Population'},
 	};
