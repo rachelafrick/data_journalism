@@ -16,8 +16,8 @@ Plotly.d3.json('./data/coverage.json', function(err, fig) {
 	}
 	var bars = [
 	    {
-	        x: ['employer', 'nongroup','medicaid','medicare','military','uninsured'],
-	        y: [fig[indexx].employer, fig[indexx].nongroup, fig[indexx].medicaid, fig[indexx].medicare, fig[indexx].military, fig[indexx].uninsured],
+	        x: ['Employer', 'Nongroup','Medicaid','Medicare','Military', fig[indexx].location + 'uninsured', 'National Average Uninsured' ],
+	        y: [fig[indexx].employer, fig[indexx].nongroup, fig[indexx].medicaid, fig[indexx].medicare, fig[indexx].military, fig[indexx].uninsured, fig[0].uninsured],
 	        type: 'bar'
 	    }
 	 ];
