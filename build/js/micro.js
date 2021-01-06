@@ -35,6 +35,13 @@ Plotly.d3.json('./data/coverage.json', function(err, fig) {
 	  yaxis: {title: 'Percent of Population'},
 	};
 
+	if(fig[indexx].uninsured<fig[0].uninsured){
+		document.getElementbyId("analysis").innerText="The data for " + fig[indexx].location + " shows that the majority of people in " + fig[indexx].location + " recieve insurance through their employer. " + fig[indexx].uninsured + " percent of the population of " + fig[indexx].location + " is uninsured. This number is less then the national average, meaning " + fig[indexx].location + " has a higher health care coverage rate than the U.S. as a whole." ;
+	}
+
+	else{
+		document.getElementbyId("analysis").innerText="The data for " + fig[indexx].location + " shows that the majority of people in " + fig[indexx].location + " recieve insurance through their employer. " + fig[indexx].uninsured + " percent of the population of " + fig[indexx].location + " is uninsured. This number is greater then the national average, meaning " + fig[indexx].location + " has a lower health care coverage rate than the U.S. as a whole." ;
+	}
 
 	 Plotly.newPlot(fig[indexx].location.replace(" ", ""), bars, layout);
 
