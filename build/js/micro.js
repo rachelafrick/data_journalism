@@ -481,6 +481,7 @@ var bars = [
     }
  ];
 
- Plotly.newPlot(mdata[indexx].location, bars);
+
+ Plotly.newPlot(mdata[indexx].location.replace(" ", ""), bars);
 
 
