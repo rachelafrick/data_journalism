@@ -1,6 +1,6 @@
 /*console.log("js/scripts.js connected to index.html");
 localStorage.setItem("top-secret-information", "you would never guess what kind of data is stored here."); */
-/*
+
 let data1= [
   {
     "location": "United States",
@@ -463,15 +463,12 @@ let data1= [
   }
 ]
 
-*/
-const fs = require("fs")
-let data1 = fs.readFileSync("./data/coverage.json")
-data1 = JSON.parse(data1);
-console.log(data1)
+
+
       var amtuninsured =[];
       var locs=[];
       var index=0;
-
+ 
 
 
       for(var i =1; i<51;i++){
@@ -493,7 +490,7 @@ console.log(data1)
           locationmode: 'USA-states',
           locations: locas,
           z: amtuninsured,
-          text: locs,
+          //text: locs,
           zmin: 0,
           zmax: 20,
           colorscale: [
@@ -526,7 +523,7 @@ console.log(data1)
       Plotly.newPlot("myDiv", data2, layout).then(gd => {
 		  gd.on('plotly_click', d => {
 		    var pt = (d.points || [])[0]
-
+		    
 		    /*switch(pt.location) {
 		      case 'CAN':
 		        console.log('you clicked on CAN')
@@ -543,15 +540,15 @@ console.log(data1)
 		    	}
 		    }
 
-		    window.location.assign("https://rachelafrick.github.io/data_journalism/build/" + data1[index+1].location.trim().replace(/ /g, "_")+".html")
-
+		    window.location.assign(data1[index+1].location.trim().replace(/ /g, "_")+".html")
+		    
 		  })
-		})
+		}) 
 
-  });
+  }); 
 
 
-
+      
 
 
 /*
@@ -599,6 +596,10 @@ console.log(data1)
       };
 
       Plotly.newPlot("myDiv", data, layout, {showLink: false});
-});
+}); 
 
 */
+
+
+
+
