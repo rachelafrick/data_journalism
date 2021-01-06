@@ -471,10 +471,7 @@ let data1= [
  
 
 
-      for(var i =1; i<51;i++){
-      	amtuninsured.push(data1[i].uninsured*100)
-      	locs.push(data1[i].location)
-      }
+      
 
       let locas= [ 'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME',  'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY' ];
 
@@ -482,6 +479,11 @@ let data1= [
       Plotly.d3.json('./data/coverage.json', function(err, fig){
 
         console.log(fig);
+
+        for(var i =1; i<51;i++){
+        amtuninsured.push(fig[i].uninsured*100)
+        locs.push(fig[i].location)
+      }
 
 
       var data2 = [{
@@ -539,7 +541,7 @@ let data1= [
 		    	}
 		    }
 
-		    window.location.assign(data1[index+1].location.trim().replace(/ /g, "_")+".html")
+		    window.location.assign(fig[index+1].location.trim().replace(/ /g, "_")+".html")
 		    
 		  })
 		}) 
