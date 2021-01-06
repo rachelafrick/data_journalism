@@ -39,6 +39,13 @@ Plotly.d3.json('./data/coverage.json', function(err, fig) {
 
 	 Plotly.newPlot(fig[indexx].location.replace(" ", ""), bars, layout).then(function() {
 		  console.log(mdata);
+		  analysis();
+		  	
+    });
+
+});
+
+function analysis(){
 			if(mdata[indexx].uninsured<mdata[0].uninsured){
 				document.getElementbyId("analysis").innerText="The data for " + mdata[indexx].location + " shows that the majority of people in " + mdata[indexx].location + " recieve insurance through their employer. " + mdata[indexx].uninsured + " percent of the population of " + mdata[indexx].location + " is uninsured. This number is less then the national average, meaning " + mdata[indexx].location + " has a higher health care coverage rate than the U.S. as a whole." ;
 			}
@@ -46,7 +53,5 @@ Plotly.d3.json('./data/coverage.json', function(err, fig) {
 			else{
 				document.getElementbyId("analysis").innerText="The data for " + mdata[indexx].location + " shows that the majority of people in " + mdata[indexx].location + " recieve insurance through their employer. " + mdata[indexx].uninsured + " percent of the population of " + mdata[indexx].location + " is uninsured. This number is greater then the national average, meaning " + mdata[indexx].location + " has a lower health care coverage rate than the U.S. as a whole." ;
 			}
-    });
-
-});
+}
 	
