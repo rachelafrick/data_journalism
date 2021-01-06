@@ -1,12 +1,6 @@
 /*console.log("js/scripts.js connected to index.html");
 localStorage.setItem("top-secret-information", "you would never guess what kind of data is stored here."); */
-const fs = require('fs');
 
-let data1=fs.readFileSync('build/data/coverage.json', 'utf8');
-data1=JSON.parse(data1)
-console.log(data1)
-
-/*
 let data1= [
   {
     "location": "United States",
@@ -467,7 +461,7 @@ let data1= [
     "military": "0.018",
     "uninsured": "0.123\r"
   }
-]*/
+]
 
 
 
@@ -496,7 +490,7 @@ let data1= [
           locationmode: 'USA-states',
           locations: locas,
           z: amtuninsured,
-          //text: locs,
+          text: locs,
           zmin: 0,
           zmax: 20,
           colorscale: [
