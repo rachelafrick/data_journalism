@@ -36,7 +36,7 @@
           marker: {
               line:{
                   color: 'rgb(255,255,255)',
-                  width: 2
+                  width: 1
               }
           }
       }];
