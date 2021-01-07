@@ -21,7 +21,7 @@ Plotly.d3.json('./data/coverage.json', function(err, fig) {
 	        y: [fig[indexx].employer*100, fig[indexx].nongroup*100, fig[indexx].medicaid*100, fig[indexx].medicare*100, fig[indexx].military*100, fig[indexx].uninsured*100, fig[0].uninsured*100],
         	type: 'bar',	      
 	        marker:{
-	        	color: ['rgb(114, 0, 214)', 'rgb(114, 0, 214)', 'rgb(114, 0, 214)', 'rgb(114, 0, 214)', 'rgb(114, 0, 214)', 'rgb(114, 0, 214)', 'rgb(0, 47, 255)']
+	        	color: ['rgb(255, 164, 46)', 'rgb(255, 164, 46)', 'rgb(255, 164, 46)', 'rgb(255, 164, 46)', 'rgb(255, 164, 46)', 'rgb(255, 164, 46)', 'rgb(255, 106, 0)']
 	        }
 	
 	    }
