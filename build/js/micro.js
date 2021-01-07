@@ -48,11 +48,11 @@ Plotly.d3.json('./data/coverage.json', function(err, fig) {
 function analysis() {
 	console.log(mdata);
 	if(mdata[indexx].uninsured<mdata[0].uninsured){
-		document.getElementById("analysis").innerText="The data for " + mdata[indexx].location + " shows that the majority of people in " + mdata[indexx].location + " recieve insurance through their employer. " + parseFloat(mdata[indexx].uninsured).toFixed(3)*100 + " percent of the population of " + mdata[indexx].location + " is uninsured. This number is less then the national average, " + mdata[0].uninsured*100 + " percent, meaning "  + mdata[indexx].location + " has a higher health care coverage rate than the U.S. as a whole." ;
+		document.getElementById("analysis").innerText="The data for " + mdata[indexx].location + " shows that the majority of people in " + mdata[indexx].location + " recieve insurance through their employer. " + (parseFloat(mdata[indexx].uninsured)*100).toFixed(1) + " percent of the population of " + mdata[indexx].location + " is uninsured. This number is less then the national average, " + mdata[0].uninsured*100 + " percent, meaning "  + mdata[indexx].location + " has a higher health care coverage rate than the U.S. as a whole." ;
 	}
 
 	else{
-		document.getElementById("analysis").innerText="The data for " + mdata[indexx].location + " shows that the majority of people in " + mdata[indexx].location + " recieve insurance through their employer. " + parseFloat(mdata[indexx].uninsured).toFixed(3)*100 + " percent of the population of " + mdata[indexx].location + " is uninsured. This number is greater then the national average, " + mdata[0].uninsured*100 + " percent, meaning "  + mdata[indexx].location + " has a lower health care coverage rate than the U.S. as a whole." ;
+		document.getElementById("analysis").innerText="The data for " + mdata[indexx].location + " shows that the majority of people in " + mdata[indexx].location + " recieve insurance through their employer. " + (parseFloat(mdata[indexx].uninsured)*100).toFixed(1) + " percent of the population of " + mdata[indexx].location + " is uninsured. This number is greater then the national average, " + mdata[0].uninsured*100 + " percent, meaning "  + mdata[indexx].location + " has a lower health care coverage rate than the U.S. as a whole." ;
 	}
 }
 	
