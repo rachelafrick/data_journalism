@@ -31,7 +31,8 @@
           autocolorscale: true,
           colorbar: {
               title: 'Percent Uninsured',
-              thickness: 1
+              thickness: .2
+              widthL 10
           },
           marker: {
               line:{
