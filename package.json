@@ -9,7 +9,7 @@
     "compile": "npm run compile:css && npm run compile:html",
     "lint": "jshint ./build/js/*.js",
     "document": "jsdoc ./build/js/*.js -d docs",
-    "build": "npm run compile && npm run lint && npm run test",
+    "build": "npm run compile && npm run lint && npm run test && npm run document",
     "test": "jest"
   },
   "repository": {
