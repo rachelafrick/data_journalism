@@ -18,8 +18,8 @@
         console.log(fig);
 
         for(var i =1; i<51;i++){
-        amtuninsured.push(fig[i].uninsured*100)
-        locs.push(fig[i].location)
+        amtuninsured.push(fig[i].uninsured*100);
+        locs.push(fig[i].location);
       }
 
 
@@ -56,7 +56,7 @@
 
       Plotly.newPlot("myDiv", data2, layout).then(gd => {
 		  gd.on('plotly_click', d => {
-		    var pt = (d.points || [])[0]
+		    var pt = (d.points || [])[0];
 		    console.log(pt.location);
 
 		    for(let i=0;i<locas.length;i++){
@@ -65,9 +65,9 @@
 		    	}
 		    }
 
-		    window.location.assign(fig[index+1].location.trim().replace(/ /g, "_")+".html")
+		    window.location.assign(fig[index+1].location.trim().replace(/ /g, "_")+".html");
 
-		  })
-		})
+		  });
+		});
 
   });

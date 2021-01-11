@@ -1,19 +1,21 @@
 
 
 
+
 var names= document.getElementById("namee").textContent;
 var indexx=0;
 let mdata=[];
-/**
- * function which generates microsummary map
- * @param {array} fig - the parsed JSON file
- */
+
+
+
+
+
 Plotly.d3.json('./data/coverage.json', function(fig) {
 	mdata=fig;
 	console.log(mdata);
 	for(let i=1; i<fig.length;i++){
-		names=names.replace(" ","")
-		let string = fig[i].location.replace(" ", "")
+		names=names.replace(" ","");
+		let string = fig[i].location.replace(" ", "");
 		if(names==string){
 			indexx=i;
 		}
@@ -47,7 +49,9 @@ Plotly.d3.json('./data/coverage.json', function(fig) {
     });
 
 });
-
+/**
+ * function which generates text-based summary for individual states
+ */
 function analysis() {
 	console.log(mdata);
 	if(mdata[indexx].uninsured<mdata[0].uninsured){
