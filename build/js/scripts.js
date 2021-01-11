@@ -2,15 +2,18 @@
       var amtuninsured =[];
       var locs=[];
       var index=0;
- 
 
 
-      
+
+
 
       let locas= [ 'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME',  'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY' ];
 
-
-      Plotly.d3.json('./data/coverage.json', function(err, fig){
+      /**
+       * function which generates microsummary map
+       * @param {array} fig - the parsed JSON file
+       */
+      Plotly.d3.json('./data/coverage.json', function(fig){
 
         console.log(fig);
 
@@ -63,11 +66,8 @@
 		    }
 
 		    window.location.assign(fig[index+1].location.trim().replace(/ /g, "_")+".html")
-		    
+
 		  })
-		}) 
+		})
 
-  }); 
-
-
-
+  });

@@ -8,14 +8,14 @@
     "compile:html": "node blog_generator.js",
     "compile": "npm run compile:css && npm run compile:html",
     "lint": "jshint ./build/js/*.js",
-    "build": "npm run compile && npm run lint",
+    "build": "npm run compile && npm run lint && npm run test",
     "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rachelafrick/rachelafrick.github.io.git"
   },
-  "author": "Rachel Africk",
+  "author": "Rachel Africk and Sanya Arora",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rachelafrick/rachelafrick.github.io/issues"

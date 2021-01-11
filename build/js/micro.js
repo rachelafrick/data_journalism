@@ -4,8 +4,11 @@
 var names= document.getElementById("namee").textContent;
 var indexx=0;
 let mdata=[];
-
-Plotly.d3.json('./data/coverage.json', function(err, fig) {
+/**
+ * function which generates microsummary map
+ * @param {array} fig - the parsed JSON file
+ */
+Plotly.d3.json('./data/coverage.json', function(fig) {
 	mdata=fig;
 	console.log(mdata);
 	for(let i=1; i<fig.length;i++){
@@ -19,11 +22,11 @@ Plotly.d3.json('./data/coverage.json', function(err, fig) {
 	    {
 	        x: ['Employer', 'Nongroup','Medicaid','Medicare','Military', fig[indexx].location + ' Uninsured', 'Ntl Avg (Uninsured)' ],
 	        y: [fig[indexx].employer*100, fig[indexx].nongroup*100, fig[indexx].medicaid*100, fig[indexx].medicare*100, fig[indexx].military*100, fig[indexx].uninsured*100, fig[0].uninsured*100],
-        	type: 'bar',	      
+        	type: 'bar',
 	        marker:{
 	        	color: ['rgb(255, 164, 46)', 'rgb(255, 164, 46)', 'rgb(255, 164, 46)', 'rgb(255, 164, 46)', 'rgb(255, 164, 46)', 'rgb(255, 164, 46)', 'rgb(201, 0, 0)']
 	        }
-	
+
 	    }
 	 ];
 
@@ -40,7 +43,7 @@ Plotly.d3.json('./data/coverage.json', function(err, fig) {
 
 	 Plotly.newPlot(fig[indexx].location.replace(" ", ""), bars, layout).then(function() {
 
-		  	
+
     });
 
 });
@@ -55,4 +58,3 @@ function analysis() {
 		document.getElementById("analysis").innerText="The data for " + mdata[indexx].location + " shows that the majority of people in " + mdata[indexx].location + " recieve insurance through their employer. " + (parseFloat(mdata[indexx].uninsured)*100).toFixed(1) + " percent of the population of " + mdata[indexx].location + " is uninsured. This number is greater then the national average, " + mdata[0].uninsured*100 + " percent, meaning "  + mdata[indexx].location + " has a lower health care coverage rate than the U.S. as a whole." ;
 	}
 }
-	
