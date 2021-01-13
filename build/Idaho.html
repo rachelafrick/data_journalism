@@ -6,22 +6,22 @@
   <meta content="text/html" http-equiv="Content-type">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <title>Blog Post</title>
-  <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+  <link rel="shortcut icon" type="image/png" href="./src/public/images/favicon.png">
   <meta name="author" content="Rachel Africk">
   <meta name="description" content="Blogpost">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
-    <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+  <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
 
 </head>
 
 <body onload="analysis()">
-  <p hidden id="namee"> Idaho </p> 
+  <p hidden id="namee"> Idaho </p>
 
   <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#"><img src="images/favicon.png" style="height:100%;"></a>
+      <a class="navbar-brand" href="#"><img src="../public/images/favicon.png" style="height:100%;"></a>
     </div>
     <ul class="nav navbar-nav">
       <li><a href="index.html">Home</a></li>
@@ -38,6 +38,7 @@
     </ul>
   </div>
 </nav>
+
   <header>
   <div>Healthcare Coverage by State</div>
   <div class="subtitle">A map of insurance coverage across the U.S.! </div>
@@ -48,23 +49,25 @@
   <div class="col-sm-8">
     <div class="row">
       <h2> Idaho </h2>
-        <p id="analysis">   </p>
+      <p id="analysis"> </p>
     </div>
     <div class="row">
-      <div id= Idaho ><!-- Plotly chart will be drawn inside this DIV --></div>
+      <div id=Idaho>
+        <!-- Plotly chart will be drawn inside this DIV -->
+      </div>
     </div>
 
   </div>
-  
-  
 
-    <script src="js/micro.js"> </script>
 
-     <!-- <footer> Not for commercial use. By Rachel Africk and Sanya Arora. Created 2020 </footer>
+
+  <script src="./src/public/js/micro.js"> </script>
+
+  <!-- <footer> Not for commercial use. By Rachel Africk and Sanya Arora. Created 2020 </footer>
  -->
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 </body>
 
 </html>

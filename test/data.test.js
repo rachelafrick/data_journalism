@@ -1,4 +1,4 @@
-const data = require('../data/coverage.json');
+const data = require('./data/coverage.json');
 //1. check that percentages are formatted as decimals
 test('all percents should be decimals', () => {
   let decimal = false

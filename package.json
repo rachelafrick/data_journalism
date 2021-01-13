@@ -4,11 +4,11 @@
   "description": "Interest Site",
   "main": "blog_generator.js",
   "scripts": {
-    "compile:css": "./node_modules/less/bin/lessc ./LESS/styles.less > ./build/css/styles.css",
+    "compile:css": "./node_modules/less/bin/lessc src/LESS/styles.less > ./build/css/styles.css",
     "compile:html": "node blog_generator.js",
     "compile": "npm run compile:css && npm run compile:html",
-    "lint": "jshint ./build/js/*.js",
-    "document": "jsdoc ./build/js/*.js -d docs",
+    "lint": "jshint src/public/js/*.js",
+    "document": "jsdoc src/public/js/*.js -d docs",
     "build": "npm run compile && npm run lint && npm run test && npm run document",
     "test": "jest"
   },
