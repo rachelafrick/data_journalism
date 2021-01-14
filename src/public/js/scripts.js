@@ -13,7 +13,7 @@
        * function which generates microsummary map
        * @param {array} fig - the parsed JSON file
        */
-      Plotly.d3.json('/datajournalism/data/coverage.json', function(fig){
+      Plotly.d3.json('/data_journalism/data/coverage.json', function(fig){
 
         console.log(fig);
 
