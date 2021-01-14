@@ -10,7 +10,7 @@ let mdata=[];
 
 
 
-Plotly.d3.json('.../data/coverage.json', function(fig) {
+Plotly.d3.json('/data_journalism/data/coverage.json', function(fig) {
 	mdata=fig;
 	console.log(mdata);
 	for(let i=1; i<fig.length;i++){
