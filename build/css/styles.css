@@ -36,6 +36,8 @@ footer {
   background-color: #235789;
   color: #DDBDD5;
   font-size: 18px;
+  position: fixed;
+  bottom: 0;
 }
 table,
 td {
