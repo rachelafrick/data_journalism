@@ -4,7 +4,7 @@
 
 var names= document.getElementById("namee").textContent;
 var indexx=0;
-let mdata=[];
+var mdata=[];
 
 
 
@@ -13,9 +13,9 @@ let mdata=[];
 Plotly.d3.json('/data_journalism/data/coverage.json', function(fig) {
 	mdata=fig;
 	console.log(mdata);
-	for(let i=1; i<fig.length;i++){
+	for(var i=1; i<fig.length;i++){
 		names=names.replace(" ","");
-		let string = fig[i].location.replace(" ", "");
+		var string = fig[i].location.replace(" ", "");
 		if(names==string){
 			indexx=i;
 		}

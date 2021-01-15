@@ -1,4 +1,4 @@
-
+/*jshint esversion: 6 */
       var amtuninsured =[];
       var locs=[];
       var index=0;
@@ -7,7 +7,7 @@
 
 
 
-      let locas= [ 'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME',  'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY' ];
+      var locas= [ 'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME',  'MD', 'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY' ];
 
       /**
        * function which generates microsummary map
@@ -59,7 +59,7 @@
 		    var pt = (d.points || [])[0];
 		    console.log(pt.location);
 
-		    for(let i=0;i<locas.length;i++){
+		    for(var i=0;i<locas.length;i++){
 		    	if(pt.location==locas[i]){
 		    		index=i;
 		    	}
