@@ -62,4 +62,6 @@ img {
 img.navb {
   width: 10%;
   height: 30%;
+  padding: 0px;
+  margin-top: 0px;
 }
