@@ -19,6 +19,9 @@ Plotly.d3.json('/data_journalism/data/coverage.json', function(fig) {
 		if(names==string){
 			indexx=i;
 		}
+		else if(names=="Alabama"){
+			indexx=1;
+		}
 	}
 	var bars = [
 	    {
